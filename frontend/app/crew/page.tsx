@@ -43,7 +43,7 @@ const DEPT_COLORS: Record<string, string> = {
   Production: "#94a3b8", VFX: "#22d3ee",
 };
 
-const API = "${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/crew";
+const API = "http://localhost:8000/api/crew";
 
 export default function CrewPage() {
   const [tasks, setTasks] = useState<Task[]>([]);

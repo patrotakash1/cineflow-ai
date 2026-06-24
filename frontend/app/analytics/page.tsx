@@ -71,7 +71,7 @@ const colors=[
 
       const response = await fetch(
 
-        '${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/analytics/overview'
+        'http://localhost:8000/api/analytics/overview'
 
       )
 

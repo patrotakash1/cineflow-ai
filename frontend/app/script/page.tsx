@@ -38,7 +38,7 @@ export default function ScriptAnalyzerPage() {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/script/upload", {
+      const res = await fetch("http://localhost:8000/api/script/upload", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

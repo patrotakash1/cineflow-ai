@@ -17,7 +17,7 @@ async function fetchNotifications(){
 
 const res=await fetch(
 
-'${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/notifications/'
+'http://localhost:8000/api/notifications/'
 
 )
 
