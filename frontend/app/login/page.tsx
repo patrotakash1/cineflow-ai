@@ -15,7 +15,7 @@ export default function LoginPage() {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('http://localhost:8000/api/auth/login', {
+      const res = await fetch("https://cineflow-ai-w1kq.onrender.com/api/auth/login", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
