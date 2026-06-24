@@ -56,7 +56,7 @@ export default function SchedulePage() {
     setLoading(true); setError(null); setResult(null);
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:8000/api/schedule/generate", {
+      const res = await fetch("${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/schedule/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         body: JSON.stringify({ scenes: scenesToUse, shoot_days: shootDays, call_time: callTime, wrap_time: wrapTime, project_name: projectName }),

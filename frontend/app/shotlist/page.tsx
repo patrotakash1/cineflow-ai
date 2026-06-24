@@ -14,7 +14,7 @@ export default function ShotListPage() {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:8000/api/shotlist/generate", {
+      const response = await fetch("${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/shotlist/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         body: JSON.stringify({ scene_name: sceneName, description, location, time_of_day: timeOfDay }),

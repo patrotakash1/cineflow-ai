@@ -26,7 +26,7 @@ export default function ReportsPage() {
 
     const response = await fetch(
 
-      "http://localhost:8000/api/reports/generate",
+      "${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/reports/generate",
 
       {
 

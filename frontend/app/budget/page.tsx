@@ -7,8 +7,8 @@ export default function BudgetPage() {
 
   async function loadData() {
     try {
-      const categoriesResponse = await fetch("http://localhost:8000/api/budget/categories");
-      const summaryResponse = await fetch("http://localhost:8000/api/budget/summary");
+      const categoriesResponse = await fetch("${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/budget/categories");
+      const summaryResponse = await fetch("${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/budget/summary");
       setCategories(await categoriesResponse.json());
       setSummary(await summaryResponse.json());
     } catch (error) { console.log(error); }

@@ -32,7 +32,7 @@ const CONDITION_COLORS: Record<string, string> = {
   excellent: "#4ade80", good: "#C9A84C", fair: "#fb923c", poor: "#f87171",
 };
 
-const API = "http://localhost:8000/api/equipment";
+const API = "${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/equipment";
 
 export default function EquipmentPage() {
   const [items, setItems] = useState<Equipment[]>([]);

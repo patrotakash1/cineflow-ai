@@ -23,7 +23,7 @@ export default function DashboardPage() {
 
   async function fetchDashboard() {
     try {
-      const res = await fetch('http://localhost:8000/api/dashboard/')
+      const res = await fetch('${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/dashboard/')
       const data = await res.json()
       setDashboardData(data)
     } catch (error) { console.log(error) }

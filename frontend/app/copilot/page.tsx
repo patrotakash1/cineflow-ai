@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
-const API = 'http://localhost:8000/api/ai'
+const API = '${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/ai'
 
 const SUGGESTIONS = [
   'How can I reduce my shooting budget for Shadows of Tomorrow?',
