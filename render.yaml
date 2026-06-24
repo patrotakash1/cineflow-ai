@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: cineflow-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SECRET_KEY
+        value: cineflow-secret-key-2026
+      - key: DATABASE_URL
+        value: sqlite:///./cineflow.db
