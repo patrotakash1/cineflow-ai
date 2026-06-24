@@ -108,11 +108,11 @@ app.include_router(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+    allow_origins=[
+        "http://localhost:3000",
+        "https://cineflow-ai-chi.vercel.app",
+        "https://cineflow-6wdhay838-reiner3.vercel.app",
+]),
 
 
 app.include_router(auth.router, prefix="/api/auth", tags=["auth"])
